@@ -28,6 +28,7 @@ public class BoardVO {
 	private String title;
 	private String content;
 	private String writer;
+	private int replycnt;
 	
 	private Date regdate;
 	private Date updateDate;

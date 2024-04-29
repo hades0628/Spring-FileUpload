@@ -19,21 +19,25 @@ public class BoardServiceImpl implements BoardService{
 	//@Autowired
 	private final BoardMapper boardMapper;
 	
+	
 	@Override
 	public void register(BoardVO board) {
 		log.info("register............." + board);
+		
 		boardMapper.insertSelectKey(board);
 	}
 
 	@Override
 	public BoardVO get(Long bno) {
 		log.info("get.........." + bno);
+		
 		return boardMapper.read(bno);
 	}
 
 	@Override
 	public boolean modify(BoardVO board) {
 		log.info("modify....... " + board );
+		
 		return boardMapper.update(board)  == 1;
 	}
 
